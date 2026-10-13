@@ -1,1 +1,0 @@
-var e=`/docs/img.jpg`;export{e as t};

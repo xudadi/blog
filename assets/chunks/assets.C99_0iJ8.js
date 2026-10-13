@@ -1,0 +1,1 @@
+var e=`/docs/img.jpg`,t=`/docs/assets/0.BycbmSJF.jpg`,n=`/docs/assets/1.CluSYBId.jpg`,r=`/docs/assets/2.uhQR5cvQ.jpg`,i=`/docs/image/scratch/chengfajisuan.png`;export{e as a,t as i,r as n,n as r,i as t};
