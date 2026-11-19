@@ -3,7 +3,7 @@ import { set_sidebar } from "../utils/index";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  base: '/docs/',
+  base: '/blog/',
   head: [["link", { rel: "icon", href: "/img.jpg" }]],
   title: "编程社团",
   //titleTemplate: ':title - 编程社团副标题',
