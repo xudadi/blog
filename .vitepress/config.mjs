@@ -1,6 +1,64 @@
 import { defineConfig } from "vitepress";
 import { set_sidebar } from "../utils/index";
 
+// Scratch 教程与比赛资料共用同一套侧边栏：路径前缀不同，但侧边栏内容一致
+const mainSidebar = [
+        {
+          text: 'scratch教程',
+          collapsed: false,
+          items: [
+            {
+              text: '初级教程',
+              collapsed: true,
+              items: [
+                { text: '乘法表1', link: '/project/scratch/chuji/2.乘法表' },
+              ]
+            },
+
+            {
+              text: '中级教程',
+              collapsed: true,
+              items: [
+                { text: '1.穿越障碍', link: '/project/scratch/zhongji/1.穿越障碍' },
+              ]
+            },
+
+            {
+              text: '高级教程',
+              collapsed: true,
+              items: [
+                { text: '乘法表2', link: '/project/scratch/zhongji/index' },
+              ]
+            }
+          ]
+        },
+
+        {
+          text: 'scratch比赛',
+          collapsed: false,
+          items: [
+            {
+              text: '重庆市第七届编程比赛',
+              collapsed: false,
+              items: [
+                { text: '比赛首页', link: '/project/bisai/' },
+                { text: '1.活动背景介绍', link: '/project/bisai/1.活动背景介绍' },
+                { text: '2.编程比赛相关信息', link: '/project/bisai/2.编程比赛相关信息' },
+                { text: '3.编程比赛报名指南', link: '/project/bisai/3.编程比赛报名指南' }
+              ]
+            },
+          ]
+        },
+
+        {
+          text: 'Scratch网站导航345',
+          collapsed: false,
+          items: [
+            { text: 'Scratch编程', link: '/project/scratch/daohang/' },
+          ]
+        }
+];
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   base: '/blog/',
@@ -62,63 +120,27 @@ export default defineConfig({
     ],
 
     sidebar: {
-      // Scratch教程的侧边栏
-      "/project/scratch/": [
+      // 两个路径前缀共用同一套侧边栏，点击链接时侧边栏不会整套切换
+      "/project/scratch/": mainSidebar,
+      "/project/bisai/": mainSidebar,
+      "/project/daohang/": [
         {
-          text: 'scratch教程',
+          text: 'Scratch网站导航',
           collapsed: false,
           items: [
-            {
-              text: '初级教程',
-              collapsed: true,
-              items: [
-                { text: '乘法表', link: '/project/scratch/chuji/2.乘法表' },
-              ]
-            },
-
-            {
-              text: '中级教程',
-              collapsed: true,
-              items: [
-                { text: '1.穿越障碍', link: '/project/scratch/zhongji/1.穿越障碍' },
-              ]
-            },
-
-            {
-              text: '高级教程',
-              collapsed: true,
-              items: [
-                { text: '乘法表', link: '/project/scratch/zhongji/index' },
-              ]
-            }
+            { text: 'Scratch编程123', link: '/project/daohang/index' },
           ]
-        },
-
-        {
-          text: 'scratch比赛',
-          collapsed: false,
-          items: [
-            {
-              text: '重庆市第七届编程比赛',
-              collapsed: false,
-              items: [
-                { text: '1.活动背景介绍', link: '/project/bisai/1.活动背景介绍' },
-                { text: '2.编程比赛相关信息', link: '/project/bisai/2.编程比赛相关信息' },
-                { text: '3.编程比赛报名指南', link: '/project/bisai/3.编程比赛报名指南' }
-              ]
-            },
-
-           
-          ]
-        },
-
-
+        }
       ],
-
-      // 整页显示，不含侧边栏
-      //"/project/scratch/chuji/": set_sidebar("/project/scratch/chuji"),
-     // "/project/scratch/zhongji/": set_sidebar("/project/scratch/zhongji"),
-     // "/project/scratch/gaoji/": set_sidebar("/project/scratch/gaoji"),
+      "/project/chajian/": [
+        {
+          text: 'Scratch插件推荐789',
+          collapsed: false,
+          items: [
+            { text: 'Scratch插件推荐', link: '/project/chajian/index' },
+          ]
+        }
+      ],
     },
 
 

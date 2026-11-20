@@ -1,4 +1,4 @@
-# Scratch教程
+# Scratch默认首页
 
 测试1
 
